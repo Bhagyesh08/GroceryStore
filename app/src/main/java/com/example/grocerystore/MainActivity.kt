@@ -56,9 +56,10 @@ class MainActivity : AppCompatActivity(),GroceryAdapter.GroceryProductClickInter
             val Prname:String=Pname.text.toString()
             val proPrice:String=Pprice.text.toString()
             val PrQuantity:String=Pquantity.text.toString()
-            val pp:Int=proPrice.toInt()
-            val pq:Int=PrQuantity.toInt()
+
             if(Prname.isNotEmpty()&&proPrice.isNotEmpty()&&PrQuantity.isNotEmpty()){
+                val pp:Int=proPrice.toInt()
+                val pq:Int=PrQuantity.toInt()
                 val products=GroceryProducts(Prname,pq,pp)
                 groceryViewModel.insert(products)
                 Toast.makeText(applicationContext,"Product Inserted!!",Toast.LENGTH_SHORT).show()
@@ -69,6 +70,7 @@ class MainActivity : AppCompatActivity(),GroceryAdapter.GroceryProductClickInter
 
             else{
                 Toast.makeText(applicationContext,"Please enter all fields!!",Toast.LENGTH_SHORT).show()
+                option.dismiss()
             }
         }
         option.show()

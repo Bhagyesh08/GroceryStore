@@ -27,7 +27,7 @@ class GroceryAdapter(var list:List<GroceryProducts>, val groceryproductinterface
 
     override fun onBindViewHolder(holder: GroceryViewHolder, position: Int) {
         holder.name.text=list.get(position).Product
-        holder.Quantity.text=list.get(position).Quantity.toString()
+        holder.Quantity.text="Qty:" + list.get(position).Quantity.toString()
         holder.rate.text="Rs. "+list.get(position).Price.toString()
         val totalprice:Int=list.get(position).Price*list.get(position).Quantity
         holder.Amount.text="Rs. " + totalprice.toString()
