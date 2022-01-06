@@ -37,5 +37,6 @@
         app:srcCompat="@drawable/ic_baseline_add_24"
         app:tint="@color/black"
         tools:layout_editor_absoluteX="350dp"
-        tools:layout_editor_absoluteY="673dp" />
+        tools:layout_editor_absoluteY="673dp"
+        tools:ignore="VectorDrawableCompat" />
 </RelativeLayout>

@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
 
-            android:weightSum="4"
+            android:weightSum="3"
             android:orientation="horizontal">
 
             <TextView
@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
                 android:layout_marginLeft="3dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="3dp"
                 android:layout_marginRight="3dp"
                 android:layout_marginBottom="3dp"
@@ -40,7 +40,7 @@
             <TextView
 
                 android:id="@+id/rate"
-                android:layout_width="61dp"
+                android:layout_width="106dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
                 android:layout_marginLeft="15dp"
@@ -51,6 +51,8 @@
                 android:layout_weight="0.5"
                 android:padding="4dp"
                 android:text="Rate"
+                android:gravity="center_horizontal"
+
                 android:textColor="#4E4E4E" />
 
             <ImageView
@@ -59,61 +61,48 @@
                 android:layout_height="wrap_content"
 
                 android:layout_gravity="center_vertical"
-                android:layout_weight="0.5"
                 android:layout_marginTop="8dp"
+                android:layout_weight="0.5"
                 android:padding="4dp"
                 android:src="@drawable/ic_baseline_delete_24" />
-
-            <TextView
-                android:id="@+id/price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="3dp"
-                android:textAlignment="textEnd"
-                android:layout_marginBottom="3dp"
-                android:layout_weight="1"
-                android:padding="4dp"
-                android:text="Amount"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="#4E4E4E"
-                android:gravity="end" />
-
 
 
         </LinearLayout>
 
         <TextView
             android:id="@+id/quantity"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/list"
+            android:layout_alignParentLeft="true"
             android:layout_marginStart="3dp"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="3dp"
             android:layout_marginBottom="3dp"
-            android:layout_toLeftOf="@+id/amount"
             android:padding="4dp"
             android:text="Quantity"
             android:textColor="@color/black" />
+
+        <!--            android:layout_toLeftOf="@+id/amount"-->
 
         <TextView
             android:id="@+id/amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/list"
-
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="3dp"
             android:layout_marginTop="3dp"
-            android:layout_marginEnd="3dp"
-            android:layout_marginRight="3dp"
+            android:layout_marginEnd="186dp"
+            android:layout_marginRight="186dp"
+
             android:layout_marginBottom="3dp"
+            android:gravity="center"
             android:padding="4dp"
             android:text="Amount"
             android:textColor="@color/black" />
+        <!--            android:layout_alignParentRight="true"-->
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
