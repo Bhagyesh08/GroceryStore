@@ -20,8 +20,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class MainActivityFragment : Fragment(),GroceryAdapter.GroceryProductClickInterface {
 
 
-    //lateinit var RV: RecyclerView
-   // lateinit var FAB: FloatingActionButton
+   
     lateinit var list: List<GroceryProducts>
     lateinit var groceryAdapter: GroceryAdapter
     lateinit var groceryViewModel: GroceryViewModel
@@ -37,8 +36,7 @@ class MainActivityFragment : Fragment(),GroceryAdapter.GroceryProductClickInterf
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        view.findViewById<RecyclerView>(R.id.rv)
-//        view.findViewById<FloatingActionButton>(R.id.fab)
+
         list = ArrayList<GroceryProducts>()
         groceryAdapter = GroceryAdapter(list, this)
         view.findViewById<RecyclerView>(R.id.rv).layoutManager = LinearLayoutManager(context)
